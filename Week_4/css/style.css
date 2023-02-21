@@ -1,0 +1,143 @@
+
+*{
+    box-sizing:border-box;
+}
+
+html, body, main, article, section {
+    margin: 0;
+  }
+
+.clearfix::after {
+    display: block;
+    clear:both;
+    height:0;
+    font-size:0;
+    content: '';
+    visibility: hidden;
+}
+
+  header {
+    width: 100%;
+    padding: 0;
+    height: 100px;
+    position: fixed;
+    z-index: 10;
+    background-color: grey;
+    top: 0; 
+  }
+
+
+  
+  header h1 {
+    color: #333;
+    display: inline-block;
+    margin: 25px;
+    padding: 0;
+  }
+  
+  header nav {
+    display: inline-block;
+    float: right; 
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 25px;
+   
+  }
+  nav li {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    width:120px;
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color:#333;
+    display: block;
+    transition: all 0.5s;
+  }
+  
+  nav a:hover {
+    background-color: rgba(40, 40, 40,0.5);
+    color: #444;
+  }
+  
+  nav a.active {
+    background-color: #444;
+    color: white;
+  }
+
+  main {
+    width: 960px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2050px;
+    background-color: rgba(97, 99, 97, 0.2);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+   
+}
+
+
+article{
+    width: 580px;
+    float: left;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-top: 150px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    
+}
+img {
+    width: 300px;
+    padding-bottom: 150px;
+    margin-right: 50px;
+    height: auto;
+    float: left;
+
+}
+
+.text {
+    text-align: left;
+    float: top right;
+    
+}
+
+
+
+
+footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #b4adad;
+}
+
+.footer-style footer h3 {
+    font-size: 30px;
+    color: #333;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 0;
+    text-align: left;
+    float: left;
+}
+
+footer p {
+    margin-left: 40px;
+    font-size: medium;
+}
