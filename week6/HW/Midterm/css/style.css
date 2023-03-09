@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@700&display=swap');
+
+
+/* Styles the background image */
+body {
+  background-image: url("/Users/kiannaeddy/Desktop/webDev/WebDevSpring23Work/WEEK_4/HW/img /555.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+ 
+}
+
+/* Gets rid of the website preexisting margins*/
+html, body, main, article, section {
+  margin: 0;
+}
+
+.clearfix::after {
+  display: block;
+  clear:both;
+  height:0;
+  font-size:0;
+  content: '';
+  visibility: hidden;
+}
+
+/* Styles the header box */
+header {
+  width: 100%;
+  padding: 0;
+  height: 100px;
+  position: fixed;
+  z-index: 10;
+  background-color: #f3f5df;
+  top: 0; 
+}
+
+ /* Styles the header text */
+header h1 {
+  font-family: "Genos", sans-serif;
+  font-size: 50px;
+  color: #44590B;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  padding: 0;
+}
+
+
+header nav {
+  color: #44590B;
+  display: inline-block;
+  float: right; 
+}
+ 
+/* Styles the nav bar link boxes */
+header nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 25px;
+}
+
+
+nav li {
+  font-size: 25px;
+  height: 50px;
+  line-height: 50px;
+  width:120px;
+  display: inline-block;
+}
+  
+
+nav a {
+  font-family: "Genos", sans-serif;
+  text-decoration: none;
+  color: #384d35;
+  display: block;
+  transition: all 0.5s;
+}
+
+/* Styles the hover effect for the links in the nav bar */
+nav a:hover {
+  background-color: rgba(68, 89, 11, 0.7);
+  color: #f3f5df;
+  border-radius: 10px;
+}
+
+/* Styles the nav bar links when active */
+nav a.active {
+  background-color: rgba(68, 89, 11);
+  color: #f3f5df;
+  border-radius: 10px;
+} 
+ 
+.header-sub {
+  color: #44590B;
+  font-size: 30px;
+  margin-left: 80px;
+  margin-right: 40px;
+}
+
+/* Style center green box that contains intro/project information */
+main {
+  font-family: "Genos", sans-serif;
+  width: 960px;
+  margin-top: 150px;
+  margin-bottom: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2200px;
+  background-color: rgba(163, 186, 101, 0.9);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  border-radius: 20px; 
+  
+}
+
+/* Something to do with project text */
+article {
+  width: 580px;
+  float: center;
+  margin-right: 20px;
+  padding-left: 50px;
+  padding-top: 100px;
+}
+
+article .featured  {
+  font-size: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+    
+}
+
+/* Styles the project images */
+.name-intro h2 {
+  font-size: 60px;
+  color: #f3f5df;
+}
+
+/* Styles the "learn more" buttons */
+a.link-one, a.link-two, a.link-three {
+  background-color: #f3f5df;
+  color: #44590B;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  stroke: none;
+}
+
+.link-one, .link-two, .link-three {
+  padding-bottom: 10px;
+  position: relative; top:-130px; left: 400px; 
+  
+}
+
+/* Hover effects for "learn more" buttons */
+a.link-one:hover, a.link-two:hover, a.link-three:hover, a.view-all:hover {
+  background-color: #44590B;
+  color: #f3f5df;
+  transition: all 0.5s;
+}
+
+.project-images img {
+  width: 300px;
+  margin-bottom: 150px;
+  margin-right: 20px;
+  height: 400px;
+  float: left;
+  cursor: pointer;
+}
+
+.project-title-style-one, .project-title-style {
+  font-size: 40px;
+  margin-bottom: 100px;
+  position: relative; left: -10px; 
+}
+.project-title-style {
+  margin-top: 20px;
+  position: relative; left:5px; 
+}
+
+.project-body-style, .project-body-style-one {
+  text-align: left;
+  margin-bottom: 150px;
+  position: relative; left:100px; top: -50px; 
+}
+
+
+/* Creates the box for the footer information */
+footer {
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+  height: 220px;
+  background: #44590B;
+  padding-top: 0px;
+  font-family: "Genos", sans-serif;
+  box-sizing:border-box;
+}
+
+/* Styles the footer title */
+.footer .footer-title {
+  font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  color: #f3f5df;
+  display: inline-block;
+  text-align: left;
+}
+
+/* Styles the footer text */
+.footer .footer-text {
+  font-size: 20px;
+  padding-left: 60px;
+  color: #f3f5df;
+}
+
+/* MEDIA QUERIES */
+/* Phone */
+@media only screen and (max-width:767px) {
+  header {
+    height:160px;
+  }
+
+  header nav {
+    float: center;
+  }
+
+  header h1 {
+    margin-bottom: 0px;
+  }
+
+  footer{
+    width: 100%
+  }
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 2200px;
+    margin-top: 225px;
+    border-radius: 0px;
+  }
+
+  .footer .footer-text  {
+    font-size: 25px;
+    padding-left: 80px;
+  } 
+
+  .footer .footer-title {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 40px;
+  }
+
+  body {
+    width: 100%;
+    background-size: cover;
+  }
+
+  .link-one, .link-two, .link-three {
+    position: relative; top:-130px; left: 130px; 
+  }
+
+  .project-images img {
+    position: relative; right: 35px;
+  }
+
+  .project-body-style, .project-body-style-one {
+    position: relative; bottom: -80px; left: -20px;
+  }
+
+
+
+}
+
+/* Tablet */
+@media screen and (min-width:786px) and (max-width: 1024px) {
+  main {
+    width: 80%;
+    height: 2200px;
+  }
+
+  .link-one, .link-two, .link-three {
+    position: relative; top:-130px; left: 80px; 
+  }
+
+  .project-body-style, .project-body-style-one {
+    position: relative; top: -60px; left: -20px;
+  }
+
+  .project-images {
+    position: relative; left: -60px;
+  } 
+
+  .project-title-style-one, .project-title-style {
+    position: relative; left: -60px; 
+  }
+}
