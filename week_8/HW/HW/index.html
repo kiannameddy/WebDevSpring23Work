@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <link rel="stylesheet" href="style.css">
+        <title>Playing w/ javascript</title>
+        <style></style>
+        <h1>Lets Play With Some Javascript!</h1>
+        <p>Click the buttons to turn on/off the light.</p>
+        <script type="text/javascript">
+        function lightSwitch(sw) {
+            var light;
+            if (sw == 0) {
+                light = "offLight.jpeg"
+            } else {
+                light = "onLIght.jpeg"
+            }
+            document.getElementById('lightImage').src = light;
+        }
+
+        </script>
+        <!-- Switch Images -->
+        <img id="lightImage" scr="offLight.jpeg" 
+        height="90" width="50"/>
+        <!-- Light Bulb Images -->
+        <p>
+        <!-- Switch Buttons -->
+            <button type="button" onclick="lightSwitch(1)">Light On</button>
+            <button type="button" onclick="lightSwitch(0)">Light Off</button>
+        <!-- Light Color Buttons -->
+        </p>
+        <form action="create-profile.js" name="user-create" target="_self" method="GET">
+            <fieldset>
+                <legend>Find out your birthstone</legend>
+                <label for="month">Select your birth month</label>
+                <select name="month" onchange="document.getElementById('stoneImage').src = this.value;">
+                    <option>Choose Month</option>
+                    <option value="jan.webp">January</option>
+                    <option value="feb.jpeg">February</option>
+                    <option value="march.jpeg">March</option>
+                    <option value="april.jpeg">April</option>
+                    <option value="may.jpeg">May</option>
+                    <option value="june.jpeg">June</option>
+                    <option value="july.jpeg">July</option>
+                    <option value="aug.jpeg">August</option>
+                    <option value="sept.jpeg">September</option>
+                    <option value="oct.jpeg">October</option>
+                    <option value="nov.jpeg">November</option>
+                    <option value="dec.jpeg">December</option>
+                </select>
+                <img src="" id="stoneImage"> 
+            </fieldset>
+        </form>
+    </body>
+</html> 
