@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <title>Kianna Eddy</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+.flexible-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flexible-container {
+    position: relative;
+    padding-top: 72%;
+    height: 0;
+    overflow: hidden;
+}
+    </style>
+</head>
+  <!-- Header -->
+  <header class="p-0 m-0 border-0">
+    <div class="fixed-top">
+    <nav class="navbar navbar-expand-lg" style="background-color: bisque; height: 100px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Kianna Eddy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav align-self-end px-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resume</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >Work</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">HTML</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">p5js</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Figma</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+</header>
+<body>
+    <div class="flexible-container">
+    <!-- <div class="embed-responsive"></div> -->
+        <object class="embed-responsive-item" data="resume/resume.pdf"
+           type="application/pdf" internalinstanceid="9" title="Kianna Eddy's Resume" >
+           <p>
+              Your browser isn't supporting embedded pdf files. You can download the file
+              <a href="resume/resume.pdf">here</a>
+           </p>
+        </object>
+     </div>
+</body>
+<footer class="footer">
+    <div class="sticky-bottom" style="background-color: bisque; height: 100px;">
+        <div>Add some contact text here</div>
+    </div>
+</footer>
+</html>

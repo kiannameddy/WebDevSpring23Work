@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+}
+
+.header {
+    display: flex; 
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: aqua;
+    padding-left: 50px;
+}
+
+.nav-bar {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    background-color: rgba(68, 89, 11, 0.7);
+    color: #f3f5df;
+    border-radius: 10px;
+}
+
+
+
+  
+  
