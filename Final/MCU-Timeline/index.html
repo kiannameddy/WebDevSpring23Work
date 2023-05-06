@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css">
+		<title>MCU Timeline</title>
+	</head>
+
+			<!-- <div class="portal-container">
+				<img class="portal_image"src="img/doctor_strange_portal.png" alt="Image">
+  				<div class="quote">
+    				<p class="random-quote"> quote<span id="text"></p></span>
+  				</div>
+  				<div class="random-author"> author <span id="author"></span></div>
+				<div class="random-title">
+					<p class="title"> title <span id="title"></p></span>
+				</div>
+  				<div class= "buttons">
+				<a id="tweet" href="" title="Tweet this!"><button class= "button"><i class= "fa fa-twitter"></i></button></a> 
+					<div class= "new-quote-button" >
+    					<button class="button" id="new-quote"> New Quote </button>
+   				 	</div>
+  				</div>
+			</div> -->
+
+		<div class="header-wrapper">
+			<div class="container">
+				<a><img src="img/doctor_strange_portal.png"  alt="Portal"></a>
+				<div class="display">
+					<p id="quote">
+					   I decided last min I wanted to add a random marvel quote generator using an API.
+					   I could only get this random quote generator to work so just pretend these are marvel quotes lol. 
+					</p>
+				  
+				  <h3 id="author">"Marvel" Character</h3>
+				</div>	
+				<button id="btn">Get Quote</button>			  
+			</div>
+		</div>			  
+	
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<section class="articles">
+					<div class="articles__container">
+						<h1 class="articles__title">MCU Timeline</h1>
+						<div class="articles__filter filter-articles">
+							<div class="dropdown button-group sort-by-button-group">
+								<button data-filter="*" class="filter-articles__item active" type="button">View All</button>
+								<div class="dropdown-content">
+								  <a data-sort-value="article_chrono">Chronological</a>
+								  <a data-sort-value="article__date">Release Date</a>
+								  <a class="name" data-sort-value="article_alpha">Alphabetical</a>
+								</div>
+							</div>
+							<div class="dropdown">
+								<button data-filter="tv-show" class="filter-articles__item" type="button">TV Shows</button>
+								<div class="dropdown-content">
+								  <a data-sort-value="chrono">Chronological</a>
+								  <a data-sort-value="date">Release Date</a>
+								  <a data-sort-value="alpha">Alphabetical</a>
+								</div>
+							</div>
+							<div class="dropdown">
+								<button data-filter="movie" class="filter-articles__item" type="button">Movies</button>
+								<div class="dropdown-content">
+								  <a data-sort-value="chrono">Chronological</a>
+								  <a data-sort-value="date">Release Date</a>
+								  <a data-sort-value="alpha">Alphabetical</a>
+								</div>
+							</div>
+							</div>
+						<!-- <div class="thumb"> -->
+						<div class="articles__items grid">
+							<article data-filter="movie" class="articles__item article thumb" id="3">
+								<a class="article__image ">
+									<img src="img/iron-man.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Iron Man</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 2, 2008</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 2hrs 6mins</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+								<!-- </div> -->
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="5">
+								<a class="article__image">
+									<img src="img/the-incredible-hulk.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: The Incredible Hulk</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: June 13, 2008</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 112 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="4">
+								<a href="#" class="article__image">
+									<img src="img/iron-man-2.jpeg" alt="Image" id="">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Iron Man 2</p>
+									</div> 
+									<div class="article__date">
+										<p>Release Date: May 7, 2010</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 125 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="6">
+								<a href="#" class="article__image">
+									<img src="img/thor.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Thor</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 6, 2011</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 114 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="1">
+								<a href="#" class="article__image">
+									<img src="img/captain-america-the-first-avenger.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Captain America: The First Avenger</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 22, 2011</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 124 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="7">
+								<a href="#" class="article__image">
+									<img src="img/the-avengers.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: The Avengers</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 4, 2012</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 143 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="8">
+								<a href="#" class="article__image">
+									<img src="img/iron-man-3.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Iron Man 3</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 3, 2013</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 131 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="9">
+								<a href="#" class="article__image">
+									<img src="img/thor-dark-world.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Thor: The Dark World</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 8, 2013</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 112 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="10">
+								<a href="#" class="article__image">
+									<img src="img/captain-america-winter-soldier.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Captain America: The Winter Soldier</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: April 4, 2014</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 136 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="11">
+								<a href="#" class="article__image">
+									<img src="img/guardians-of-the-galaxy.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Guardians of the Galaxy</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: August 1, 2014</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 122 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="14">
+								<a href="#" class="article__image">
+									<img src="img/avengers-age-of-ultron.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Avengers: Age of Ultron</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 1, 2015</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 141 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="15">
+								<a href="#" class="article__image">
+									<img src="img/ant-man.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Ant-Man</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 17, 2015</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 117 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="16">
+								<a href="#" class="article__image">
+									<img src="img/captain-america-civil-war.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Captain America: Civil War</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 6, 2016</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 147 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="18">
+								<a href="#" class="article__image">
+									<img src="img/doctor-strange.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Doctor Strange</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 4, 2016</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 115 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="12">
+								<a href="#" class="article__image">
+									<img src="img/guardians-of-the-galaxy-2.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Guardians of the Galaxy Vol. 2</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 7, 2017</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 136 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="17">
+								<a href="#" class="article__image">
+									<img src="img/spiderman-homecoming.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Spider-Man: Homecoming</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 7, 2017</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 133 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="21">
+								<a href="#" class="article__image">
+									<img src="img/thor-ragnarok.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Thor: Ragnarok</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 3, 2017</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 130 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="20">
+								<a href="#" class="article__image">
+									<img src="img/black-panther.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Black Panther</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: February 16, 2018</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 134 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="23">
+								<a href="#" class="article__image">
+									<img src="img/avengers-infinity-war.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Avengers: Infinity War</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: April 27, 2018</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 149 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="22">
+								<a href="#" class="article__image">
+									<img src="img/ant-man-wasp.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Ant-Man and the Wasp</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 6, 2018</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 118 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="2">
+								<a href="#" class="article__image">
+									<img src="img/captain-marvel.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Captain Marvel</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: March 8, 2019</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 124 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="24">
+								<a href="#" class="article__image">
+									<img src="img/avengers-endgame.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Avengers: Endgame</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: April 26, 2019</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 181 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="30">
+								<a href="#" class="article__image">
+									<img src="img/spiderman-far-from-home.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Spider-Man: Far From Home</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 2, 2019</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 129 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="27"> 
+								<a href="#" class="article__image">
+									<img src="img/wandavision.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: WandaVision</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: January 15, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 30-50 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="28">
+								<a href="#" class="article__image">
+									<img src="img/falcon-and-the-winter-soldier.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: The Falcon and the Winter Soldier</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: March 19, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 49-60 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="25">
+								<a href="#" class="article__image">
+									<img src="img/loki.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Loki</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: June 9,2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 40-50 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="19">
+								<a href="#" class="article__image">
+									<img src="img/black-widow.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Black Widow</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 9, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 134 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="26">
+								<a href="#" class="article__image">
+									<img src="img/what-if.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: What if...?</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: August 11, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 30-37 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="29">
+								<a href="#" class="article__image">
+									<img src="img/shang-chi-and-the-legend-of-the-ten-rings.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Shang-Chi and the Legend of the Ten Rings</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: September 3, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 132 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="32">
+								<a href="#" class="article__image">
+									<img src="img/eternals.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Eternals</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 5, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 156 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="34">
+								<a href="#" class="article__image">
+									<img src="img/hawkeye.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Hawkeye</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 24, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 40-62 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="31">
+								<a href="#" class="article__image">
+									<img src="img/spiderman-no-way-home.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Spider-Man: No Way Home</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: December 17, 2021</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 148 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="35">
+								<a href="#" class="article__image">
+									<img src="img/moon-knight.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Moon Knight</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: March 30, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 40-53 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="33">
+								<a href="#" class="article__image">
+									<img src="img/doctor-strange-in-the-multiverse-of-madness.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Doctor Strange in the Multiverse of Madness</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: May 6, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 126 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="38">
+								<a href="#" class="article__image">
+									<img src="img/ms-marvel.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Ms. Marvel</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: June 8, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 38-50 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="39">
+								<a href="#" class="article__image">
+									<img src="img/thor-love-and-thunder.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Thor: Love and Thunder</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: July 8, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 119 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="13">
+								<a href="#" class="article__image">
+									<img src="img/i-am-groot.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: I Am Groot</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: Augest 10, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 5-6 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="37">
+								<a href="#" class="article__image">
+									<img src="img/she-hulk.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: She-Hulk: Attorney at Law</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: August 18, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 30-38 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="40">
+								<a href="#" class="article__image">
+									<img src="img/werewolf-by-night.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Werewolf by Night</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: October 7, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 53 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="36">
+								<a href="#" class="article__image">
+									<img src="img/black-panther-wakanda-forever.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Black Panther: Wakanda Forever</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 11, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 161 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="tv-show" class="articles__item article thumb" id="41">
+								<a href="#" class="article__image">
+									<img src="img/guardians-of-the-galaxy-holiday-special.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: The Guardians of the Galaxy Holiday Special</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: November 25, 2022</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 42 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+							<article data-filter="movie" class="articles__item article thumb" id="42">
+								<a href="#" class="article__image">
+									<img src="img/ant-man_and_the_wasp_quantumania.jpeg" alt="Image">
+								</a>
+								<div class="article__body mask">
+									<div class="article__title">
+										<p>Title: Ant-Man and the Wasp: Quantumania</p>
+									</div>
+									<div class="article__date">
+										<p>Release Date: February 17, 2023</p>
+									</div>
+									<div class="article_runtime">
+										<p>Runtime: 124 minutes</p>
+									</div>
+									<div class="article__text">
+										<p>Plot: Iron Man is a 2008 superhero film directed by Jon Favreau and stars Robert Downey 
+											Jr. as Tony Stark, a billionaire industrialist and genius inventor who builds a high-tech 
+											suit of armor to fight crime and terrorism. After being kidnapped by terrorists in 
+											Afghanistan and forced to build a missile for them, Stark realizes the destructive power of 
+											his own weapons and decides to use his talents to create a powerful suit to fight against 
+											those who threaten peace. With the help of his loyal assistant Pepper Potts (Gwyneth Paltrow) 
+											and his friend Rhodey (Terrence Howard), Stark battles his former business partner Obadiah Stane 
+											(Jeff Bridges) and his own inner demons to save the world from destruction.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
+
